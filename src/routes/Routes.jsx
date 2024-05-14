@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
-				// loader: () => fetch("https://study-syncer-server.vercel.app/assignment"),
+				loader: () => fetch("https://study-syncer-server.vercel.app/assignment"),
 			},
 			{
 				path: "/login",
