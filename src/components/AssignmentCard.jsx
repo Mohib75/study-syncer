@@ -68,7 +68,7 @@ const AssignmentCard = ({ assign, filteredAssignments, setFilteredAssignments })
 					<Button
 						onClick={() => handleDelete(_id)}
 						className='btn rounded-lg bg-transparent text-[#2B2938] border-solid border-[1px] border-[#F2ECFF] hover:bg-[#F2ECFF] transition-all duration-500'>
-						<MdDelete className='tsm:ext-2xl' />
+						<MdDelete className='sm:text-2xl' />
 					</Button>
 				</div>
 				<div className='card-actions justify-center'>

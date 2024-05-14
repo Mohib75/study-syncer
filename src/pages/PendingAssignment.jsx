@@ -2,6 +2,7 @@
 import { Link, useLoaderData } from "react-router-dom"
 import Button from "../components/Button"
 import { Helmet } from "react-helmet-async"
+import { Slide } from "react-awesome-reveal"
 
 const PendingAssignment = () => {
 	const loadedAssignment = useLoaderData()
@@ -15,7 +16,10 @@ const PendingAssignment = () => {
 				<title>StudySyncer || Pending Assignment</title>
 			</Helmet>
 
-			<h1 className='text-4xl font-bold'>Pending Assignment</h1>
+			<Slide direction='down'>
+				<h1 className='text-4xl font-bold'>Pending Assignment</h1>
+			</Slide>
+
 			{pendingAssignments &&
 				pendingAssignments.map((aData, index) => (
 					<div className='overflow-x-auto bg-[#878495] rounded-2xl w-[85%] sm:w-[80%]' key={index}>

@@ -88,6 +88,10 @@ const GiveMark = () => {
 							</div>
 						</div>
 
+						<div className='w-full'>
+							<iframe className='w-full h-[20rem]' title='PDF Viewer' src={file}></iframe>
+						</div>
+
 						<div className='flex gap-4 flex-col sm:flex-row items-center w-full'>
 							<div className='space-y-1 text-sm w-full'>
 								<label htmlFor='note' className='block text-[#474554]'>
