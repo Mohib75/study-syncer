@@ -23,13 +23,13 @@ const Assignments = () => {
 	}, [loadedAssignment])
 
 	useEffect(() => {
-		fetch("http://localhost:5000/assignmentCount")
+		fetch("https://study-syncer-server.vercel.app/assignmentCount")
 			.then((res) => res.json())
 			.then((data) => setCount(data.count))
 	}, [])
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/assignment?page=${currentPage}&size=${itemsPerPage}`)
+		fetch(`https://study-syncer-server.vercel.app/assignment?page=${currentPage}&size=${itemsPerPage}`)
 			.then((res) => res.json())
 			.then((data) => setFilteredAssignments(data))
 	}, [currentPage, itemsPerPage])
