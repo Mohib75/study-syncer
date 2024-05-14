@@ -71,37 +71,35 @@ const Assignments = () => {
 				<h2 className='text-xl sm:text-6xl text-[#2B2938] font-bold my-8 text-center'>Assignments</h2>
 			</Slide>
 
-			<Slide direction='up'>
-				<div className='flex flex-col'>
-					<p className='text-2xl text-center mt-8 text-[#474554]'>Sort By</p>
-					<div className='dropdown self-center mt-4 mb-8'>
-						<div
-							tabIndex={0}
-							role='button'
-							className='btn rounded-lg bg-transparent text-[#2B2938] border-solid border-[1px] border-[#F2ECFF] hover:bg-[#F2ECFF] transition-all duration-500'>
-							Difficulty Level
-							<FaAngleDown />
-						</div>
-						<ul tabIndex={0} className='dropdown-content z-[1] menu p-4 shadow bg-[#C8C2E7] rounded-lg w-40 sm:w-52 space-y-4'>
-							<li
-								onClick={() => handleFilterByDifficultyLevel("easy")}
-								className='hover:bg-[#F2ECFF] transition-all duration-500 rounded-lg text-[#474554]'>
-								<a>Easy</a>
-							</li>
-							<li
-								onClick={() => handleFilterByDifficultyLevel("medium")}
-								className='hover:bg-[#F2ECFF] transition-all duration-500 rounded-lg text-[#474554]'>
-								<a>Medium</a>
-							</li>
-							<li
-								onClick={() => handleFilterByDifficultyLevel("hard")}
-								className='hover:bg-[#F2ECFF] transition-all duration-500 rounded-lg text-[#474554]'>
-								<a>Hard</a>
-							</li>
-						</ul>
+			<div className='flex flex-col z-20'>
+				<p className='text-2xl text-center mt-8 text-[#474554]'>Sort By</p>
+				<div className='dropdown self-center mt-4 mb-8'>
+					<div
+						tabIndex={0}
+						role='button'
+						className='btn rounded-lg bg-transparent text-[#2B2938] border-solid border-[1px] border-[#F2ECFF] hover:bg-[#F2ECFF] transition-all duration-500'>
+						Difficulty Level
+						<FaAngleDown />
 					</div>
+					<ul tabIndex={0} className='dropdown-content z-[1] menu p-4 shadow bg-[#C8C2E7] rounded-lg w-40 sm:w-52 space-y-4'>
+						<li
+							onClick={() => handleFilterByDifficultyLevel("easy")}
+							className='hover:bg-[#F2ECFF] transition-all duration-500 rounded-lg text-[#474554]'>
+							<a>Easy</a>
+						</li>
+						<li
+							onClick={() => handleFilterByDifficultyLevel("medium")}
+							className='hover:bg-[#F2ECFF] transition-all duration-500 rounded-lg text-[#474554]'>
+							<a>Medium</a>
+						</li>
+						<li
+							onClick={() => handleFilterByDifficultyLevel("hard")}
+							className='hover:bg-[#F2ECFF] transition-all duration-500 rounded-lg text-[#474554]'>
+							<a>Hard</a>
+						</li>
+					</ul>
 				</div>
-			</Slide>
+			</div>
 
 			<Slide direction='up'>
 				<div className='grid grid-cols-1 xl:grid-cols-3 gap-8 place-items-center mt-4'>
