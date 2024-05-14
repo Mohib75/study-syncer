@@ -18,7 +18,7 @@ const MySubmittedAssignment = () => {
 	return (
 		<div className='flex flex-col items-center mt-12 gap-4'>
 			<Helmet>
-				<title>Voyago || My Attempted Assignment</title>
+				<title>StudySyncer || My Attempted Assignment</title>
 			</Helmet>
 
 			<h1 className='text-4xl font-bold'>My Attempted Assignment</h1>

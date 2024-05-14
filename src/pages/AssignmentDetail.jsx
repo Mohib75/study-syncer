@@ -11,7 +11,7 @@ const AssignmentDetail = () => {
 	return (
 		<div className='flex flex-col gap-8 mt-8 mx-4 xl:mx-0'>
 			<Helmet>
-				<title>Voyago || Assignment Detail</title>
+				<title>StudySyncer || Assignment Detail</title>
 			</Helmet>
 
 			<h1 className='text-3xl sm:text-6xl font-bold text-center'>Details</h1>

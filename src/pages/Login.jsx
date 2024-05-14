@@ -37,9 +37,9 @@ const Login = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Voyago || Login</title>
+				<title>StudySyncer || Login</title>
 			</Helmet>
-			<div className="flex justify-center my-16 bg-[url('register.webp')] bg-cover bg-no-repeat p-12 px-4 sm:px-12 rounded-2xl mx-2 sm:mx-0">
+			<div className="flex justify-center my-16 bg-[url('/register.webp')] bg-cover bg-no-repeat p-12 px-4 sm:px-12 rounded-2xl mx-2 sm:mx-0">
 				<div
 					className='w-full sm:max-w-md p-8 space-y-3 rounded-xl drop-shadow-xl h-full bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border border-gray-100
 '>

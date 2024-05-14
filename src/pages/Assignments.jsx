@@ -26,7 +26,7 @@ const Assignments = () => {
 	return (
 		<div className='bg-[#ACA9BB] p-8 flex flex-col items-center rounded-2xl mt-12 mx-4 sm:mx-0'>
 			<Helmet>
-				<title>Voyago || Assignment</title>
+				<title>StudySyncer || Assignment</title>
 			</Helmet>
 			<h2 className='text-xl sm:text-6xl text-[#2B2938] font-bold my-8 text-center'>Assignments</h2>
 

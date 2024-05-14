@@ -114,7 +114,7 @@ export const router = createBrowserRouter([
 			// 			<TouristsSpotUpdate />
 			// 		</PrivateRoute>
 			// 	),
-			// 	loader: ({ params }) => fetch(`https://voyago-tourism-server.vercel.app/touristsSpot/${params.id}`),
+			// 	loader: ({ params }) => fetch(`https://studysyncer-tourism-server.vercel.app/touristsSpot/${params.id}`),
 			// },
 			// {
 			// 	path: "/addCountry",
@@ -131,7 +131,7 @@ export const router = createBrowserRouter([
 			// 			<CountryTouristsSpot />
 			// 		</PrivateRoute>
 			// 	),
-			// 	loader: () => fetch("https://voyago-tourism-server.vercel.app/country"),
+			// 	loader: () => fetch("https://studysyncer-tourism-server.vercel.app/country"),
 			// },
 		],
 	},

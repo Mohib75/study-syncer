@@ -12,7 +12,7 @@ const PendingAssignment = () => {
 	return (
 		<div className='flex flex-col items-center mt-12 gap-4'>
 			<Helmet>
-				<title>Voyago || Pending Assignment</title>
+				<title>StudySyncer || Pending Assignment</title>
 			</Helmet>
 
 			<h1 className='text-4xl font-bold'>Pending Assignment</h1>

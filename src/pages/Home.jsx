@@ -9,7 +9,7 @@ const Home = () => {
 	return (
 		<div className='mt-12 mx-4 xl:mx-0'>
 			<Helmet>
-				<title>Voyago</title>
+				<title>StudySyncer</title>
 			</Helmet>
 
 			<Hero />
