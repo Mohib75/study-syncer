@@ -99,26 +99,35 @@ const CheckoutForm = ({ handleSubmit, course }) => {
 			// create payment info object
 			const paymentInfo = {
 				...course,
+				courseId: course._id,
 				transactionId: paymentIntent.id,
 				date: new Date(),
 				status: paymentIntent.status,
+				name: user?.displayName,
+				email: user?.email,
 			}
+
+			delete paymentInfo._id
 			console.log(paymentInfo)
 
 			// try(save payment info in enrolled course collection (db))
-			await fetch("https://study-syncer-server.vercel.app/enrolledCourses", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(paymentInfo),
-			})
-				.then((res) => res.json())
-				.then((data) => {
-					// setClientSecret(data.clientSecret)
-					console.log(data)
+			try {
+				await fetch("https://study-syncer-server.vercel.app/enrolledCourses", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(paymentInfo),
 				})
+				// .then((res) => res.json())
+				// .then((data) => {
+				// 	setClientSecret(data.clientSecret)
+				// 	console.log(data)
+				// })
 
-			toast.success("Course Taken Successfully")
-			navigate("/myCourses")
+				toast.success("Course Taken Successfully")
+				navigate("/myCourses")
+			} catch (err) {
+				console.log(err)
+			}
 		}
 
 		setProcessing(false)
