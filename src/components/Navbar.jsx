@@ -37,7 +37,7 @@ const Navbar = () => {
 							<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h8m-8 6h16' />
 						</svg>
 					</div>
-					<ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-20 p-2 shadow bg-[#878495] rounded-2xl w-56 items-center gap-2'>
+					<ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-40 p-2 shadow bg-[#878495] rounded-2xl w-56 items-center gap-2'>
 						<NavLink
 							className={({ isActive }) =>
 								isActive
@@ -54,7 +54,16 @@ const Navbar = () => {
 									: "text-white leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2"
 							}
 							to='/assignment'>
-							Assignment
+							Assignments
+						</NavLink>
+						<NavLink
+							className={({ isActive }) =>
+								isActive
+									? "text-white hover:scale-110 transform transition-all duration-500 leading-5 px-4 py-2 font-bold"
+									: "text-white leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2"
+							}
+							to='/courses'>
+							Courses
 						</NavLink>
 						{/* {user ? (
 							<NavLink
@@ -135,6 +144,16 @@ const Navbar = () => {
 									My Attempted Assignment
 								</NavLink>
 
+								<NavLink
+									className={({ isActive }) =>
+										isActive
+											? "text-white hover:scale-110 transform transition-all duration-500 leading-5 px-4 py-2 font-bold text-center"
+											: "text-white leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2 text-center"
+									}
+									to='/myCourses'>
+									My Courses
+								</NavLink>
+
 								<div className='btn btn-ghost btn-circle avatar'>
 									<div className='w-10 rounded-full' title={user?.displayName || "username not found"}>
 										<img
@@ -200,15 +219,17 @@ const Navbar = () => {
 						</NavLink>
 					</Slide>
 
-					{/* <NavLink
-						className={({ isActive }) =>
-							isActive
-								? "hover:scale-110 transform transition-all duration-500 text-lg leading-5 px-4 py-2 font-bold"
-								: "text-lg leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2"
-						}
-						to='/addTouristsSpot'>
-						Add Tourists Spot
-					</NavLink> */}
+					<Slide direction='down'>
+						<NavLink
+							className={({ isActive }) =>
+								isActive
+									? "hover:scale-110 transform transition-all duration-500 text-lg leading-5 px-4 py-2 font-bold"
+									: "text-lg leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2"
+							}
+							to='/courses'>
+							Courses
+						</NavLink>
+					</Slide>
 
 					{user ? (
 						<>
@@ -235,17 +256,20 @@ const Navbar = () => {
 									Pending Assignment
 								</NavLink>
 							</Slide>
+
+							{/* <Slide direction='down'>
+								<NavLink
+									className={({ isActive }) =>
+										isActive
+											? "hover:scale-110 transform transition-all duration-500 text-lg leading-5 px-4 py-2 font-bold"
+											: "text-lg leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2"
+									}
+									to='/addCourse'>
+									Add Course
+								</NavLink>
+							</Slide> */}
 						</>
 					) : (
-						// 	<NavLink
-						// 	className={({ isActive }) =>
-						// 		isActive
-						// 			? "hover:scale-110 transform transition-all duration-500 text-lg leading-5 px-4 py-2 font-bold"
-						// 			: "text-lg leading-5 hover:scale-110 transform transition-all duration-500 px-4 py-2"
-						// 	}
-						// 	to='/allTouristsSpot'>
-						// 	Pending Assignments
-						// </NavLink>
 						""
 					)}
 				</ul>
@@ -302,12 +326,19 @@ const Navbar = () => {
 							</div>
 							<ul
 								tabIndex={0}
-								className='z-50 p-4 shadow menu menu-sm dropdown-content bg-[#17171a] text-white rounded-2xl w-56 items-center'>
+								className='z-40 p-4 shadow menu menu-sm dropdown-content bg-[#17171a] text-white rounded-2xl w-56 items-center'>
 								<NavLink
 									className={({ isActive }) => (isActive ? " leading-5 px-0 py-2 font-bold" : " leading-5 px-0 py-2")}
 									to='/mySubmittedAssignment'>
 									My attempted assignments
 								</NavLink>
+
+								<NavLink
+									className={({ isActive }) => (isActive ? " leading-5 px-0 py-2 font-bold" : " leading-5 px-0 py-2")}
+									to='/myCourses'>
+									My Courses
+								</NavLink>
+
 								<li className='flex items-center mt-4'>
 									<Button
 										className='btn rounded-full bg-transparent border-solid border-[1px] border-gray-300 text-white hover:border-gray-300 text-sm w-[120px] font-semibold leading-5 hover:scale-105 transform transition-all duration-500'

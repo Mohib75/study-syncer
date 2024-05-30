@@ -13,6 +13,10 @@ import MySubmittedAssignment from "../pages/MySubmittedAssignment"
 import PendingAssignment from "../pages/PendingAssignment"
 import GiveMark from "../pages/GiveMark"
 import ErrorPage from "../components/ErrorPage"
+import AddCourse from "../pages/AddCourse"
+import Courses from "../pages/Courses"
+import CourseDetail from "../pages/CourseDetail"
+import MyCourse from "../pages/MyCourse"
 
 export const router = createBrowserRouter([
 	{
@@ -42,9 +46,22 @@ export const router = createBrowserRouter([
 				),
 			},
 			{
+				path: "/addCourse",
+				element: (
+					<PrivateRoute>
+						<AddCourse />
+					</PrivateRoute>
+				),
+			},
+			{
 				path: "/assignment",
 				element: <Assignments />,
 				loader: () => fetch("https://study-syncer-server.vercel.app/assignment"),
+			},
+			{
+				path: "/courses",
+				element: <Courses />,
+				loader: () => fetch("https://study-syncer-server.vercel.app/courses"),
 			},
 			{
 				path: "/assignment/:id",
@@ -54,6 +71,15 @@ export const router = createBrowserRouter([
 					</PrivateRoute>
 				),
 				loader: ({ params }) => fetch(`https://study-syncer-server.vercel.app/assignment/${params.id}`),
+			},
+			{
+				path: "/courses/:id",
+				element: (
+					<PrivateRoute>
+						<CourseDetail />
+					</PrivateRoute>
+				),
+				loader: ({ params }) => fetch(`https://study-syncer-server.vercel.app/courses/${params.id}`),
 			},
 			{
 				path: "/takeAssignment/:id",
@@ -78,6 +104,14 @@ export const router = createBrowserRouter([
 				element: (
 					<PrivateRoute>
 						<MySubmittedAssignment />
+					</PrivateRoute>
+				),
+			},
+			{
+				path: "/myCourses",
+				element: (
+					<PrivateRoute>
+						<MyCourse />
 					</PrivateRoute>
 				),
 			},
