@@ -6,14 +6,17 @@ import { Slide } from "react-awesome-reveal"
 const MyCourse = () => {
 	const { user } = useAuth()
 	const [myCourse, setMyCourse] = useState([])
+	console.log(user)
 
 	useEffect(() => {
 		fetch(`https://study-syncer-server.vercel.app/myCourses/${user?.email}`)
 			.then((res) => res.json())
 			.then((data) => {
 				setMyCourse(data)
+				console.log(data)
 			})
 	}, [user])
+	console.log(myCourse)
 
 	return (
 		<div className='bg-[#ACA9BB] p-8 flex flex-col items-center rounded-2xl mt-12 mx-4 sm:mx-0'>
